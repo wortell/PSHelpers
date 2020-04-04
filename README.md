@@ -20,7 +20,7 @@ Anyone who sees something is missing out or like to share bits or piece of code 
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-If you want to start and learn about Powershell you really should visit the following site 
+If you want to start and learn about Powershell you really should visit the following site [Getting started with Windows PowerShell] (https://docs.microsoft.com/powershell/scripting/getting-started/getting-started-with-windows-powershell)
 
 ### Prerequisites
 If you are using Windows® 8.1 and Windows Server® 2012 R2 or newer your system include all required programs.  
