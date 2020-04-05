@@ -21,16 +21,16 @@ jobs:
       name: Run script
       env:
         NuGetApiKey: ${{ secrets.NuGetApiKey }}
-        GitHubKey: ${{ secrets.GitHubKey }}
-    - name: Upload Test Results
-      uses: actions/upload-artifact@v1.0.0
-      if: always()
-      with:
-        name: testresults
-        path: BuildOutput/testResults
-    - name: Upload Compiled module
-      uses: actions/upload-artifact@v1.0.0
-      if: always()
-      with:
-        name: compiledmodule
-        path: BuildOutput/wrt.helpers
+        GitHubKey: ${{ secrets.GITHUB_TOKEN }}
+    # - name: Upload Test Results
+    #   uses: actions/upload-artifact@v1.0.0
+    #   if: always()
+    #   with:
+    #     name: testresults
+    #     path: BuildOutput/testResults
+    # - name: Upload Compiled module
+    #   uses: actions/upload-artifact@v1.0.0
+    #   if: always()
+    #   with:
+    #     name: compiledmodule
+    #     path: BuildOutput/wrt.helpers
