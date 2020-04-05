@@ -2,7 +2,7 @@ Write-Host "Executing Deploy.PS1"
 if (
     $env:BuildSystem -eq 'GitHub Actions'
 ) {
-    if (($env:BranchName -eq 'master' -or $env:BranchName -eq 'development') -and
+    if ($env:BranchName -eq 'master' -and
         $env:NuGetApiKey -and
         $env:GitHubKey -and
         $env:CommitMessage -match '!Deploy'
