@@ -33,4 +33,4 @@ jobs:
       if: always()
       with:
         name: compiledmodule
-        path: BuildOutput/AzSentinel
+        path: BuildOutput/wrt.helpers
