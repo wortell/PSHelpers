@@ -24,10 +24,11 @@
     Author               = 'Maurice de Jong'
 
     # Company or vendor of this module
-    CompanyName          = 'Wortell'
+    CompanyName          = 'Wortell Enterprise Security BV.'
 
     # Copyright statement for this module
-    Copyright            = '(c) Wortell Enterprise Security BV. All rights reserved.'
+    Copyright            = 'Copyright (c) 2020 Wortell Enterprise Security BV.'
+    # https://opensource.stackexchange.com/questions/2121/mit-license-and-all-rights-reserved ??
 
     # Description of the functionality provided by this module
     Description          = 'This PowerShell module contains multiple helper functions to help reduce redundant code for our projects and day to day usage.'
