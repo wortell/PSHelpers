@@ -49,7 +49,7 @@ Process {
     # Defining the Default task 'workflow' when invoked without -tasks parameter
     task .  Clean,
     Set_Build_Environment_Variables,
-    Pester_Quality_Tests_Stop_On_Fail,
+    # Pester_Quality_Tests_Stop_On_Fail,
     Copy_Source_To_Module_BuildOutput,
     Merge_Source_Files_To_PSM1,
     Clean_Folders_from_Build_Output,
