@@ -22,15 +22,15 @@ jobs:
       env:
         NuGetApiKey: ${{ secrets.NuGetApiKey }}
         GitHubKey: ${{ secrets.GITHUB_TOKEN }}
-    - name: Upload Test Results
-      uses: actions/upload-artifact@v1.0.0
-      if: always()
-      with:
-        name: testresults
-        path: BuildOutput/testResults
-    - name: Upload Compiled module
-      uses: actions/upload-artifact@v1.0.0
-      if: always()
-      with:
-        name: compiledmodule
-        path: BuildOutput/wrt.helpers
+    # - name: Upload Test Results
+    #   uses: actions/upload-artifact@v1.0.0
+    #   if: always()
+    #   with:
+    #     name: testresults
+    #     path: BuildOutput/testResults
+    # - name: Upload Compiled module
+    #   uses: actions/upload-artifact@v1.0.0
+    #   if: always()
+    #   with:
+    #     name: compiledmodule
+    #     path: BuildOutput/wrt.helpers
