@@ -106,10 +106,10 @@
             )
 
             # A URL to the license for this module.
-            LicenseUri = 'https://github.com/wortell/wortell-helpers/blob/master/LICENSE'
+            LicenseUri = 'https://github.com/wortell/PSHelpers/blob/master/LICENSE'
 
             # A URL to the main website for this project.
-            ProjectUri = 'https://wortell.github.io/wortell-helpers/'
+            ProjectUri = 'https://wortell.github.io/PSHelpers/'
 
             # A URL to an icon representing this module.
             # IconUri = ''

@@ -21,7 +21,7 @@ jobs:
       name: Run script
       env:
         NuGetApiKey: ${{ secrets.NuGetApiKey }}
-        GitHubKey: ${{ secrets.GitHubKey }}
+        GitHubKey: ${{ secrets.GITHUB_TOKEN }}
     - name: Upload Test Results
       uses: actions/upload-artifact@v1.0.0
       if: always()
