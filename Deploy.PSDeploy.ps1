@@ -7,7 +7,7 @@ if (
         $env:GitHubKey -and
         $env:CommitMessage -match '!Deploy'
     ) {
-        $manifest = Import-PowerShellDataFile -Path "./$env:ProjectName/$env:ProjectName.psd1"
+        $manifest = Import-PowerShellDataFile -Path "./src/$env:ProjectName.psd1"
         $manifest.RequiredModules | ForEach-Object {
             if ([string]::IsNullOrEmpty($_)) {
                 return
