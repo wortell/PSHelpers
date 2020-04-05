@@ -54,9 +54,9 @@ Process {
     Merge_Source_Files_To_PSM1,
     Clean_Folders_from_Build_Output,
     Update_Module_Manifest,
-    Run_Unit_Tests,
-    Fail_Build_if_Unit_Test_Failed,
-    Fail_if_Last_Code_Coverage_is_Under_Threshold,
+    # Run_Unit_Tests,
+    # Fail_Build_if_Unit_Test_Failed,
+    # Fail_if_Last_Code_Coverage_is_Under_Threshold,
     Deploy_with_PSDeploy
 
     # Define a testAll tasks for interactive testing
