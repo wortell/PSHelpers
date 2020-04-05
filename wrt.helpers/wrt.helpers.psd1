@@ -9,7 +9,7 @@
 @{
 
     # Script module or binary module file associated with this manifest.
-    RootModule           = 'helpers.psm1'
+    RootModule           = 'wrt.helpers.psm1'
 
     # Version number of this module.
     ModuleVersion        = '1.0.0'
@@ -33,7 +33,7 @@
     Description          = 'This PowerShell module contains multiple helper functions to help reduce redundant code for our projects and day to day usage.'
 
     # Minimum version of the PowerShell engine required by this module
-    PowerShellVersion    = '4.0'
+    PowerShellVersion    = '5.1'
 
     # Name of the PowerShell host required by this module
     # PowerShellHostName = ''
@@ -75,7 +75,7 @@
 
     # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
     FunctionsToExport    = @(
-        'Test-ProductIsEnabled'
+        'Test-IsProductEnabled'
     )
 
     # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.

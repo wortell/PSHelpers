@@ -1,8 +1,9 @@
 # wrt.helpers
 
-| branch      | status                                                                                         |
-| ----------- | ---------------------------------------------------------------------------------------------- |
-| master      | ![](https://github.com/wortell/wortell-helpers/workflows/Build-Module/badge.svg?branch=master) |
+| branch      | status                                                                                              |
+| ----------- | --------------------------------------------------------------------------------------------------- |
+| master      | ![](https://github.com/wortell/wortell-helpers/workflows/Build-Module/badge.svg?branch=master)      |
+| development | ![](https://github.com/wortell/wortell-helpers/workflows/Build-Module/badge.svg?branch=development) |
 
 
 PowerShell is a task-based command-line shell and scripting language built on .NET. PowerShell helps system administrators and power-users rapidly automate tasks that manage operating systems (Linux, macOS, and Windows) and processes.  
@@ -19,20 +20,27 @@ We would like the code to be Windows Powershell 4.0 compatible. As because of th
 Anyone who sees something is missing out or like to share bits or piece of code is welcome to create a PR. 
 
 ## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.  
+
+```Bash
+git clone https://github.com/wortell/wortell-helpers.git
+Import-Module ./wortell-helpers/src/helpers
+```  
+
 If you want to start and learn about PowerShell you really should visit the following site [Getting started with Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/getting-started-with-windows-powershell)
 
 ### Prerequisites
 If you are using Windows® 8.1 and Windows Server® 2012 R2 or newer your system include all required programs.  
 If you are using Windows 7 SP1 [OS support warning](https://www.microsoft.com/windows/windows-7-end-of-life-support-information) or Server 2008 R2 [OS support warning](https://www.microsoft.com/cloud-platform/windows-server-2008) you could install PowerShell Core. [Visit installing PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7)  
 
-### Installing
+### Deployment
 
 You can install the latest version of Wortell Helpers module from [PowerShell Gallery](https://www.powershellgallery.com/packages/wrt-helpers)
 
 ```PowerShell
 Install-Module wrt.helpers -Scope CurrentUser -Force
-```
+```  
+
 ## Find us
 
 * [Wortell](https://security.wortell.nl/)

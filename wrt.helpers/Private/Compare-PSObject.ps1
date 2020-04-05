@@ -1,4 +1,4 @@
-#requires -version 5.1
+#requires -version 4.0
 <#
 .SYNOPSIS
 Compare PS Objects and return them with a clear equality sign
