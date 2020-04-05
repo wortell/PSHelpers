@@ -1,7 +1,7 @@
 ﻿param (
-    [string] $ProjectName = 'AzSentinel',
+    [string] $ProjectName = 'wrt.helpers',
 
-    [string] $SourceFolder = $ProjectName,
+    [string] $SourceFolder = 'src',
 
     [string] $BuildOutput = (property BuildOutput 'C:\BuildOutput'),
 
