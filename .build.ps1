@@ -60,7 +60,7 @@ Process {
     Deploy_with_PSDeploy
 
     # Define a testAll tasks for interactive testing
-    task testAll UnitTests, IntegrationTests, QualityTestsStopOnFail
+    # task testAll UnitTests, IntegrationTests, QualityTestsStopOnFail
 
     # Define a dummy task when you don't want any task executed (e.g. Only load PSModulePath)
     task Noop { }
