@@ -31,7 +31,7 @@ Task Copy_Source_To_Module_BuildOutput {
     $BuiltModuleFolder = [io.Path]::Combine($BuildOutput,$ProjectName)
     "Copying $BuildRoot/$SourceFolder To $BuiltModuleFolder/"
     'enums', 'Classes', 'Private', 'Public' | ForEach-Object -Process {
-        Get-Item -Path "$BuildRoot/$SourceFolder/$_" |
+        Get-Item -Path "$BuildRoot/$SourceFolder/$_" -ErrorAction SilentlyContinue |
             Copy-Item -Destination "$BuiltModuleFolder/$_" -Recurse -Force -Exclude '*.bak','wip*'
     }
     Get-Item -Path "$BuildRoot/$SourceFolder/*.psd1" |
