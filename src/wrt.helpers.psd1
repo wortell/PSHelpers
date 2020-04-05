@@ -33,7 +33,7 @@
     Description          = 'This PowerShell module contains multiple helper functions to help reduce redundant code for our projects and day to day usage.'
 
     # Minimum version of the PowerShell engine required by this module
-    PowerShellVersion    = '5.1'
+    PowerShellVersion    = '4.0'
 
     # Name of the PowerShell host required by this module
     # PowerShellHostName = ''
