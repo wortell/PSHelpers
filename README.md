@@ -45,7 +45,7 @@ Install-Module wrt.helpers -Scope CurrentUser -Force
 
 * [Wortell](https://security.wortell.nl/)
 * [GitHub](https://github.com/wortell/wortell-helpers)
-* [PowerShell Gallery](https://www.powershellgallery.com/packages/wrt-helpers)
+* [PowerShell Gallery](https://www.powershellgallery.com/packages/wrt.helpers)
 
 ## Contributing
 
