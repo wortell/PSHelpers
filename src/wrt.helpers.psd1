@@ -12,6 +12,7 @@
     RootModule           = 'wrt.helpers.psm1'
 
     # Version number of this module.
+
     ModuleVersion        = '1.0.3'
 
     # Supported PSEditions
@@ -34,7 +35,7 @@
     Description          = 'This PowerShell module contains multiple helper functions to help reduce redundant code for our projects and day to day usage.'
 
     # Minimum version of the PowerShell engine required by this module
-    PowerShellVersion    = '4.0'
+    PowerShellVersion    = '5.1'
 
     # Name of the PowerShell host required by this module
     # PowerShellHostName = ''
