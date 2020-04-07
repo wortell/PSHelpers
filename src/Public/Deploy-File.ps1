@@ -17,6 +17,7 @@ function Deploy-File
         $Log
     )
     $PSDefaultParameterValues = $Global:PSDefaultParameterValues
+    $ProgressPreference = "SilentlyContinue" 
     $targetPath = "$env:TEMP\{$correlationId}"
     
     try 

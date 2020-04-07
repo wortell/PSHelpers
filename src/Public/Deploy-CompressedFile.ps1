@@ -16,6 +16,7 @@ param (
     $Log
 )   
     $PSDefaultParameterValues = $Global:PSDefaultParameterValues
+    $ProgressPreference = "SilentlyContinue" 
     $targetPath = "$env:TEMP\{$correlationId}"
     $fullpathZip = "$env:TEMP\{$correlationId}.zip"
     try

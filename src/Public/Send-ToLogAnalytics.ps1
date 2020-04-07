@@ -45,12 +45,13 @@ Function Send-ToLogAnalytics
         [Parameter(Mandatory)]
         [string]
         $CustomerId,
-        
+
         # the sharedsecret which is used to as an API key
         [Parameter(Mandatory)]
         [string]
         $SharedKey
     )
+    $ProgressPreference = "SilentlyContinue" 
     Write-Verbose $message
     $method = "POST"
     $contentType = "application/json"
