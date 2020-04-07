@@ -21,7 +21,7 @@ param (
     $fullpathZip = "$env:TEMP\{$correlationId}.zip"
     try
     {
-        Invoke-WebRequest $Url -OutFile $fullpathZip -ErrorAction Stop
+        Invoke-WebRequest $Url -OutFile $fullpathZip -ErrorAction Stop 
         If($Log) { Send-ToLogAnalytics -message "The compressed uninstall package from Azure Blob to the local computer, $fullpathZip" }
     }
     catch
