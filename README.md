@@ -24,7 +24,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ```Bash
 git clone https://github.com/wortell/wortell-helpers.git
-Import-Module .\PSHelpers\src\helpers.psm1
+Import-Module .\PSHelpers\src\helpers.psd1
 ```  
 
 If you want to start and learn about PowerShell you really should visit the following site [Getting started with Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/getting-started-with-windows-powershell)
