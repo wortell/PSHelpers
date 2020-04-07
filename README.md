@@ -65,7 +65,7 @@ See also the list of [contributors](https://github.com/wortell/wortel-helpers/co
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/wortell/wrtell-helpers/tags).
 
-Current version 1.0.4
+Current version 1.1.0
 
 ## License
 
