@@ -30,18 +30,18 @@ function Remove-RegistryValue
         $Log
     )
     $PSDefaultParameterValues = $Global:PSDefaultParameterValues
-    If(Test-Path $RegistryPath)
+    If(Test-Path $Path)
     {
-        If(Test-RegistryValue -Path $RegistryPath -Value $RegistryValue)
+        If(Test-RegistryValue -Path $Path -Value $RegistryValue)
         {
             try 
             {
-                Remove-ItemProperty -Path $RegistryPath -Name $RegistryValue -ErrorAction Stop
-                If($Log) { Send-ToLogAnalytics -message "Removed $RegistryValue in path $RegistryPath." }
+                Remove-ItemProperty -Path $Path -Name $RegistryValue -ErrorAction Stop
+                If($Log) { Send-ToLogAnalytics -message "Removed $Path in path $RegistryPath." }
             }
             catch 
             {
-                If($Log) { Send-ToLogAnalytics -message "Could not remove $RegistryValue in path $RegistryPath. $($_.Exception) $($_.ErrorDetails)" }
+                If($Log) { Send-ToLogAnalytics -message "Could not remove $Path in path $RegistryPath. $($_.Exception) $($_.ErrorDetails)" }
             }
         }
     }

@@ -12,7 +12,8 @@
     RootModule           = 'wrt.helpers.psm1'
 
     # Version number of this module.
-    ModuleVersion        = '1.1.0'
+
+    ModuleVersion        = '1.0.3'
 
     # Supported PSEditions
     CompatiblePSEditions = 'Core', 'Desktop'
