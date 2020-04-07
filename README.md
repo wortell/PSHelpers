@@ -11,7 +11,7 @@ PowerShell commands let you manage computers from the command line.
 PowerShell providers let you access data stores, such as the registry and certificate store, as easily as you access the file system.  
 PowerShell includes a rich expression parser and a fully developed scripting language.
 
-## Why this PowerShell Module
+## Why this PowerShell Module 
 Consistency is the main goal of the module.  This module will greatly reduce redundant code for deployment and configuration projects or even day to day administration tasks.  Several different projects pick up knowledge about techniques that are randomly used by anyone.  
 In some way we need to adopt and share that knowledge and take with us to the next project. 
 
