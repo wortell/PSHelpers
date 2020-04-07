@@ -12,7 +12,7 @@
     RootModule           = 'wrt.helpers.psm1'
 
     # Version number of this module.
-    ModuleVersion        = '1.0.1'
+    ModuleVersion        = '1.0.2'
 
     # Supported PSEditions
     CompatiblePSEditions = 'Core', 'Desktop'
@@ -49,7 +49,7 @@
     # CLRVersion = ''
 
     # Processor architecture (None, X86, Amd64) required by this module
-    ProcessorArchitecture = 'Amd64'
+    # ProcessorArchitecture = 'Amd64'
 
     # Modules that must be imported into the global environment prior to importing this module
     # RequiredModules      = @(
@@ -76,7 +76,14 @@
 
     # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
     FunctionsToExport    = @(
-        'Test-IsProductEnabled'
+        'Deploy-CompressedFile',
+        'Deploy-File',
+        'Find-File',
+        'Remove-RegistryValue',
+        'Send-MessageToLocalUsers',
+        'Send-ToLogAnalytics',
+        'Test-IsProductEnabled',
+        'Test-RegistryValue'
     )
 
     # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
