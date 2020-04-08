@@ -20,10 +20,10 @@ Function Send-MessageToLocalUsers
     try 
     {
         Start-Process "$env:SystemRoot\System32\msg.exe" -ArgumentList '* /time $ /v "$TimeOut" ' -ErrorAction Stop
-        If($Log) { Write-LogAnalyticsMessage -message "Message send to all users on this system." }
+        If($Log) { Send-ToLogAnalytics -message "Message send to all users on this system." }
     }
     catch 
     {
-        If($Log) { Write-LogAnalyticsMessage -message "Could not send message." }
+        If($Log) { Send-ToLogAnalytics -message "Could not send message." }
     }
 }
