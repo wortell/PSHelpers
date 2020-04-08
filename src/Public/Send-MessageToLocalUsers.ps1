@@ -19,7 +19,7 @@ Function Send-MessageToLocalUsers
     $PSDefaultParameterValues = $Global:PSDefaultParameterValues
     try 
     {
-        Start-Process "$env:SystemRoot\System32\msg.exe" -ArgumentList '* /time $TimeOut /v "$Message" ' -ErrorAction Stop
+        Start-Process "$env:SystemRoot\System32\msg.exe" -ArgumentList "* /time $TimeOut /v '$Message' " -ErrorAction Stop
         If($Log) { Send-ToLogAnalytics -message "Message send to all users on this system." }
     }
     catch 
