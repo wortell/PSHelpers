@@ -93,5 +93,4 @@ Function Send-ToLogAnalytics
 	
     $response = Invoke-WebRequest -Uri $uri -Method $method -ContentType $contentType -Headers $headers -Body $body -UseBasicParsing
     Start-Sleep -Milliseconds 100
-    return $response.StatusCode
 }
