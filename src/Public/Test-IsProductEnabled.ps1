@@ -22,8 +22,9 @@ function Test-IsProductEnabled {
     [CmdletBinding()]
     param (
         # Product State contains a value (DWORD) that contains multiple bitflags and we use the productState flag (0000F000)
-        [Parameter(Mandatory, Position=0, ValueFromPipeline, HelpMessage="The value (DWORD) containing the bitflags.")]
-        [Int32]$ProductState
+        [Parameter(Mandatory, Position = 0, ValueFromPipelineByPropertyName, HelpMessage = "The value (DWORD) containing the bitflags.")]
+        [Alias("STATE")]
+        [UInt32]$ProductState
     )
     $ProductEnabled = 0x1000
     $ProductStateMask = 0x0000f000
