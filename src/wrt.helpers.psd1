@@ -13,7 +13,7 @@
 
     # Version number of this module.
 
-    ModuleVersion        = '1.0.3'
+    ModuleVersion        = '1.0.8'
 
     # Supported PSEditions
     CompatiblePSEditions = 'Core', 'Desktop'
@@ -80,7 +80,10 @@
         'Deploy-CompressedFile',
         'Deploy-File',
         'Find-File',
+        'Remove-RegistryKey',
         'Remove-RegistryValue',
+        'Resolve-ProductState',
+        'Search-Registry',
         'Send-MessageToLocalUsers',
         'Send-ToLogAnalytics',
         'Test-IsProductEnabled',
@@ -111,7 +114,8 @@
             # Tags applied to this module. These help with module discovery in online galleries.
             Tags       = @(
                 'helper',
-                'productstate'
+                'productstate',
+                'registry'
             )
 
             # A URL to the license for this module.
@@ -124,7 +128,7 @@
             # IconUri = ''
 
             # ReleaseNotes of this module
-            ReleaseNotes = 'First release'
+            ReleaseNotes = 'Added Resolve-ProductState'
 
         } # End of PSData hashtable
 
