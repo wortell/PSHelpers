@@ -1,3 +1,4 @@
+function Add-ProductStates {
 <#
 .SYNOPSIS
     Adds statuses to a product PSObject.
@@ -88,7 +89,6 @@
 .NOTES
     This function utilizes Test-IsProductEnabled, ... To enrich information on State.
 #>
-function Add-ProductStates {
     [CmdletBinding()]
     param (
         # This parameter can be passed from pipeline and can contain and array of collections that contain State or productstate members
@@ -111,11 +111,19 @@ function Add-ProductStates {
                 If (Get-Member -inputobject $Products[0] -name "productState" -Membertype Properties) {
                     $results += $Products.PSObject.Copy()
                     foreach ($item in $Products) {
-                        If($results.Where({$_.instanceGuid -eq $item.instanceGuid}).Properties.name -notmatch "enabled") {                       
-                            $results.Where({$_.instanceGuid -eq $item.instanceGuid}) | Add-Member -NotePropertyName enabled -NotePropertyValue $(Test-IsProductEnabled -ProductState $item.productState)
+                        If($results.Where({$_.instanceGuid -eq $item.instanceGuid}).Properties.name -notmatch "state") {                       
+                            $results.Where({$_.instanceGuid -eq $item.instanceGuid}) | 
+                                Add-Member -NotePropertyName state -NotePropertyValue $([ProductState]($item.productState -band [ProductFlags]::ProductState))
                         }
                         else {
-                            Write-Error 'Could not enabled property it already exists...'
+                            Write-Error 'Could not add state property it already exists...'
+                        }
+                        If($results.Where({$_.instanceGuid -eq $item.instanceGuid}).Properties.name -notmatch "signatureStatus") {                       
+                            $results.Where({$_.instanceGuid -eq $item.instanceGuid}) | 
+                                Add-Member -NotePropertyName signatureStatus -NotePropertyValue $([SignatureStatus]($item.productState -band [ProductFlags]::SignatureStatus))
+                        }
+                        else {
+                            Write-Error 'Could not add signatureStatus property it already exists...'
                         }
                     }
                 }
@@ -124,7 +132,8 @@ function Add-ProductStates {
         If ($ProductState -and (-not $Products)) {
             If($results.Properties.name -notmatch "enabled") {
                 $results += New-Object PSObject -Property @{
-                        enabled = $(Test-IsProductEnabled -ProductState $ProductState)
+                        state = $([ProductState]($item.productState -band [ProductFlags]::ProductState))
+                        signatureStatus = $([SignatureStatus]($item.productState -band [ProductFlags]::SignatureStatus))
                 }
             }
         }

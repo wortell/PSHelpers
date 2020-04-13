@@ -1,5 +1,5 @@
-[Flags()] enum signatureStatus
+[Flags()] enum SignatureStatus
 {
-    UpToDate     = 0x10
-    OutOfDate    = 0x00
+    UpToDate     = 0x00
+    OutOfDate    = 0x10
 }
