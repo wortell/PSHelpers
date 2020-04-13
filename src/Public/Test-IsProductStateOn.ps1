@@ -10,7 +10,7 @@ function Test-IsProductStateOn {
         The value (DWORD) containing the bitflags.
     .EXAMPLE
         PS C:\> Test-IsProductStateOn -ProductState 393472
-        $false
+        False
         This example shows basic functionality
     .OUTPUTS
         Bool
