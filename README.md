@@ -2,7 +2,7 @@
 
 | branch      | status                                                                                              |
 | ----------- | --------------------------------------------------------------------------------------------------- |
-| master      | ![](https://github.com/wortell/wortell-helpers/workflows/Build-Module/badge.svg?branch=master)      |
+| main      | ![](https://github.com/wortell/wortell-helpers/workflows/Build-Module/badge.svg?branch=main)      |
 | development | ![](https://github.com/wortell/wortell-helpers/workflows/Build-Module/badge.svg?branch=development) |
 
 
