@@ -1,4 +1,4 @@
-function Convert-StringToShort {
+function Convert-ToShortString {
     <#
     .SYNOPSIS
         returns an abreviate from the string you provide, try to get a 3 letter word
@@ -15,7 +15,7 @@ function Convert-StringToShort {
     [CmdletBinding()]
     param (
         # this where you provide the string 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory = $true, ValueFromPipeline)]
         [string]$StringInput
     )
     
@@ -28,20 +28,20 @@ function Convert-StringToShort {
         {
             Switch ($StringInput)
             {
-                "development"{ "dev" }
-                "production"{ "prd" }
-                "prod"      { "prd" }
-                "testing"   { "tst" }
-                "test"      { "tst" }
-                "staging"   { "stg" }
-                "testing"   { "tst" }
-                "acceptance"{ "acc" }
-                default     { ($StringInput.ToLower() -replace '[aeiouy]').SubString(0,3) }
+                "development"{ return "dev" }
+                "production"{ return "prd" }
+                "prod"      { return "prd" }
+                "testing"   { return "tst" }
+                "test"      { return "tst" }
+                "staging"   { return "stg" }
+                "testing"   { return "tst" }
+                "acceptance"{ return "acc" }
+                default     { return ($StringInput.ToLower() -replace '[aeiouy]').SubString(0,3) }
             }
         }
         else 
         {
-            Write-Host $StringInput.ToLower()
+            return  $StringInput.ToLower()
         }
     }
     
